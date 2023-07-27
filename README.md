@@ -38,7 +38,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Add solution URL here](https://github.com/ankur26/todo-list)
-- Live Site URL: [Add live site URL here](https://todo-list-sage-beta.vercel.app)
+- Live Site URL: [Add live site URL here](https://todo-list-2p2mik7rf-ankur26.vercel.app/)
 
 ## My process
 
