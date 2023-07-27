@@ -1,16 +1,15 @@
-import { ChangeEvent } from "react";
 
 export type HeaderTypes = {
   changeMode: () => void;
 };
 
 export type TodoItemType = {
-  id: string | null | undefined;
+  id: string;
   text: string;
   completed: boolean;
   // onClick?:(e:MouseEventHandler,id:string)=>void
-  updateTodoListItemCompletionStatus?: (id: string) => void;
-  deleteItem?: (id: string) => void;
+  updateTodoListItemCompletionStatus: (id: string) => void;
+  deleteItem: (id: string) => void;
 };
 
 export type TodoListType = {
