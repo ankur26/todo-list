@@ -31,7 +31,7 @@ Users should be able to:
 
 ### Screenshot
 
-![Light Mode](./images/ListLightMode.pngscreenshot.jpg)
+![Light Mode](./images/ListLightMode.png)
 ![Dark Mode](./images/ListDarkMode.png)
 
 
