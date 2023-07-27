@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;300;400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+  box-sizing: border-box;
+}
+body{
+  margin: 0 auto;
+  color-scheme: light dark;
+  height: 100vh;
+}
+#root{
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+  height: 100vh;
+}
