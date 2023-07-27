@@ -1,27 +1,67 @@
-# React + TypeScript + Vite
+# Frontend Mentor - Todo app solution
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a solution to the [Todo app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/todo-app-Su1_KokOW). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
 
-Currently, two official plugins are available:
+## Table of contents
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Continued development](#continued-development)
+- [Author](#author)
 
-## Expanding the ESLint configuration
+## Overview
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+### The challenge
 
-- Configure the top-level `parserOptions` property like this:
+Users should be able to:
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
+- View the optimal layout for the app depending on their device's screen size
+- See hover states for all interactive elements on the page
+- Add new todos to the list
+- Mark todos as complete
+- Delete todos from the list
+- Filter by all/active/complete todos
+- Clear all completed todos
+- Toggle light and dark mode
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+### Screenshot
+
+![Light Mode](./images/ListLightMode.pngscreenshot.jpg)
+![Dark Mode](./images/ListDarkMode.png)
+
+
+### Links
+
+- Solution URL: [Add solution URL here](https://github.com/ankur26/todo-list)
+- Live Site URL: [Add live site URL here](https://todo-list-sage-beta.vercel.app)
+
+## My process
+
+### Built with
+
+- [Tailwind CSS](http://tailwindcss.com/)
+- [Vite](https://vitejs.dev/)
+- [TypeScript](https://www.typescriptlang.org/)
+- Flexbox
+- [React](https://reactjs.org/) - JS library
+
+### What I learned
+1. Tailwind CSS while making class naming conventions for the worse does speed up development for CSS pretty well, with a good design system in place and a predefined theme it should be pretty quick to get going
+2. Typescript was a first for me and I realized the importance and the assistance that types gives me while development. It also acts as assurance as I was failing my deployment build due typescript errors( which is good regardless of the fact that TS compiles to JS, it's to prevent bad unsafe and invalid code to get out.)
+3, This is my first time playing with React context and I really found it useful, especially with the dark mode.
+
+### Continued Work
+1. The state is still very clunky and needs to probably be shifted to useReducer calls.
+2. The dark mode context ends up being used pretty much in multiple lines of even a single react component,need to work on making it a single condition so that the JSX written on the components are cleaner.
+3. Styling is still not up to par. And it's missing Drag and Drop.
+
+## Author
+
+- Website - [Ankur Bhatkalkar](https://www.linkedin.com/in/ankur-bhatkalkar/)
+- Frontend Mentor - [@ankur26](https://www.frontendmentor.io/profile/ankur26)
+

@@ -9,8 +9,8 @@ export type TodoItemType = {
   text: string;
   completed: boolean;
   // onClick?:(e:MouseEventHandler,id:string)=>void
-  updateTodoListItemCompletionStatus: (id: string) => void;
-  deleteItem: (id: string) => void;
+  updateTodoListItemCompletionStatus?: (id: string) => void;
+  deleteItem?: (id: string) => void;
 };
 
 export type TodoListType = {
@@ -24,9 +24,9 @@ export type TodoListType = {
 };
 
 export type TodoInputType = {
-  onChange: (e: ChangeEvent) => void;
+  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
   updateCompletionStatus: () => void;
-  onKeyDown: (e: KeyboardEvent) => void;
+  onKeyDown: (e:React.KeyboardEvent<HTMLInputElement>) => void;
   text: string;
   completed: boolean;
 };

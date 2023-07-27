@@ -1,11 +1,11 @@
 import { v4 as uuidv4 } from "uuid";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import Header from "./components/Header";
 import ImageContainer from "./components/ImageContainer";
 import TodoInput from "./components/TodoInput";
 import { ThemeContext } from "./context";
 import useLocalStorage from "use-local-storage";
-import { TodoItemType, TodoListType } from "./types";
+import { TodoItemType } from "./types";
 import TodoList from "./components/TodoList";
 
 function App() {
@@ -21,7 +21,7 @@ function App() {
     completed: false,
     text: "",
   } as TodoItemType);
-  const [todoList, setTodoList] = useState<Array<TodoItemType> | []>([]);
+  const [todoList, setTodoList] = useState<Array<TodoItemType>>([]);
   const [filteredList,setFilteredList] = useState<Array<TodoItemType> | []>([]);
   
   useEffect(()=>{
@@ -42,7 +42,7 @@ function App() {
     let newList = todoList.filter(item=>!item.completed);
     setTodoList(newList);
   }
-  function deleteItem(id) {
+  function deleteItem(id:string):void {
     let newList = todoList.filter((listItem) => listItem.id !== id);
     setTodoList(newList);
   }
@@ -67,18 +67,18 @@ function App() {
   }
   function createTodoItem(): void {
     console.log("Todo item will be created");
-    let newItem = { ...todoItem, id: uuidv4() };
+    let newItem = { ...todoItem, id: uuidv4() } as TodoItemType;
     setTodoList(todoList.concat(newItem));
     setTodoItem({
       completed: false,
       text: "",
     } as TodoItemType);
   }
-  function onChange(e): void {
+  function onChange(e:React.ChangeEvent<HTMLInputElement>): void {
     let newItem: TodoItemType = { ...todoItem, text: e.target.value };
     setTodoItem(newItem);
   }
-  function onKeyDown(e): void {
+  function onKeyDown(e:React.KeyboardEvent<HTMLInputElement>): void {
     if (e.key === "Enter") {
       createTodoItem();
     }
